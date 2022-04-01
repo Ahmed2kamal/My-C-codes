@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace time_converter
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            restart:
+            Console.WriteLine("enter 1 for hours , 2 for minutes");
+            int time = int.Parse(Console.ReadLine());
+            if (time == 1) { Console.WriteLine("enter the amount of hours you want to convert into minutes"); }
+            else if (time == 2) { Console.WriteLine("enter the amount of minutes you want to convert into seconds"); }
+            else { Console.WriteLine("invalid choice"); }
+            int time_2 =int.Parse(Console.ReadLine());
+            Console.WriteLine("your result is " + time_2 * 60);
+            Console.WriteLine("---------------------------------------------------------");
+            Console.WriteLine("thanks for using the program :) ");
+            Console.WriteLine("=========================================================");
+            Console.ReadKey();
+            goto restart;
+
+        }
+    }
+}
